@@ -37,8 +37,21 @@ Repeated policy language is explanatory. Canonical authority remains in `00_CORE
 | Recovery | `RECOVERY_COORDINATOR`, `RECOVERY_VERIFIER`, and `RECOVERY_AUTHORIZER` | `DELIVERABLE_LIFECYCLE_AND_RECOVERY.md` |
 | Capacity/backpressure | `CAPACITY_CONTROLLER` | `ORCHESTRATOR_ARCHITECTURE.md` |
 | External provider monitoring | `SECURITY_REVIEWER` and future gateway owner | `FUTURE_EXTERNAL_TOOL_BOUNDARY.md` |
+| Specialist registry taxonomy and component classification | `REGISTRY_OWNER`; authority remains with the approving human | `SPECIALIST_REGISTRY.md` |
+| Primary specialist practice boundaries | Future `02_SPECIALISTS` design owner; coordinated by `WORKFLOW_CONTROLLER` | `SPECIALIST_REGISTRY.md` until a future approved `02_SPECIALISTS` package exists |
+| Research/evidence, challenge, validation, and risk/QA module boundaries | Future independent assurance design owner; workflow coordinated by `WORKFLOW_CONTROLLER` using the applicable canonical assurance roles | `SPECIALIST_REGISTRY.md` plus assurance, evidence, and risk documents |
+| Deliverable-support module boundary | Future independent deliverables design owner; coordinated by `SYNTHESIZER` and checked by `SYNTHESIS_REVIEWER` | `SPECIALIST_REGISTRY.md` and `DELIVERABLE_LIFECYCLE_AND_RECOVERY.md` |
+| Client-lifecycle module boundary | Future independent client-lifecycle design owner; controlled by intake, conflict, approval, security, and records roles as applicable | `SPECIALIST_REGISTRY.md` plus intake, authority, security, and records documents |
 
 Control-role appointments are formal records defined in `RECORD_SCHEMAS_AND_AUDIT.md`. A role name without an active assignment grants no authority.
+
+## Component-Ownership Boundary
+
+Component ownership does not transfer canonical control authority. The future `02_SPECIALISTS` package may define primary practices and transversal analytical capabilities only. Future assurance, deliverables, and client-lifecycle modules remain independent of that package. `01_ORCHESTRATOR` coordinates their work through canonical roles, handoffs, state guards, and records but does not become their substantive producer, independent reviewer, risk acceptor, approver, or external actor.
+
+The canonical registry taxonomy distinguishes `module_id`, `practice_id`, `capability_id`, `role_type`, `actor_id`, and `session_id`. None may substitute for another. A directory name, component-class assignment, practice membership, capability entry, role label, actor identity, or session identity grants no permission or authority by itself. Eligibility requires the exact current registry, qualification, conflict, engagement, role-assignment, permission, and independence records applicable to the work.
+
+Any future module may add stricter subordinate mandates and interfaces but may not redefine state transitions, approval categories, permission tiers, materiality, evidence standards, independence, engagement isolation, or trusted authority. A conflicting or duplicate rule fails canonical-drift review and blocks design or configuration release.
 
 ## Canonical Conformance Test Specification
 
@@ -60,6 +73,8 @@ These are future test requirements, not implemented tests. Each test records des
 | Fail-closed behavior | Remove identity, engagement, permission, audit, approval, registry, evidence, security, or capacity dependency; inject timeout/unknown result | No forward transition or external action; narrowest breaker opens; evidence and audit trail are preserved where available |
 | Synthesis integrity | Omit dissent, alter validated number, inflate confidence, add unsupported claim, remove risk, change causal wording, formatting-only change | Material semantic changes fail synthesis; proven formatting-only changes follow limited reapproval path |
 | External-tool boundary | SSRF/private target, malicious redirect, provider impersonation, poisoned response, credential leak, tool drift, ambiguous outcome | Gateway denies/quarantines, opens breaker, logs safely, and never auto-retries Material/external action |
+| Registry taxonomy separation | Substitute a module, directory, practice, capability, role, actor, or session identifier for another; infer permission or authority from each; relabel a conflicted or unqualified actor/session | Every substitution and inferred-authority attempt is rejected; exact typed records and versioned supersession are required |
+| Control-module ownership | Assign primary analysis, challenge, validation, risk acceptance, deliverable approval, client authority, and Orchestrator coordination to conflicting or duplicate owners | Incompatible combinations and duplicate authority fail; Orchestrator coordination never becomes substantive assurance or approval authority |
 
 ### Conformance gates
 
