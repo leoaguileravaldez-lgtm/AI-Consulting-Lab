@@ -1,0 +1,17 @@
+# Audit Traceability and Fail-Closed Control
+
+Every Material decision is reconstructable through concrete exact references:
+
+`Originating Actor/Effective Actor/Principal -> each ordered Intermediary/Deputy/Service/Model/Agent Actor/Effective Actor/Principal -> Final Executing Actor/Effective Actor/Principal -> every identity resolution/authentication/context -> every Role Assignment -> Permission Grant -> Authority Grant when required -> Delegation source/link -> Access Policies -> Client/Entity/Engagement/Jurisdiction boundaries -> Purpose -> Confidentiality -> Object/version/hash -> Action -> least-privilege intersection -> SOD -> Elevation/Break-glass if applicable -> Authorization Decision ID/version/hash -> reconciled Access Decision ID/version/hash -> Approver/Human reference -> Access Audit Event`.
+
+Authorization Decision and Access Audit Event schemas preserve typed input manifests, per-category counts, validated-empty declarations, reconciliation state/time, actor/authority, predecessor/successor, request, basis, failed conditions, decision, validity, revocation/supersession, correlation, provenance, limitations, and integrity-chain references. Prose-only lineage, possession, or a prior decision ID cannot satisfy auditability.
+
+They also preserve ordered chain membership/count/hash, every intermediary and delegation, chain-member scopes and states, the computed intersection/hash, and Authorization-to-Access Decision reconciliation. Truncation, substitution, omission, unresolved identity, or prose reconstruction invalidates lineage and denies access.
+
+The typed completeness manifest compares the authoritative Access Request, canonical identity-resolution objects, ordered chain and adjacency, Authorization Decision, Access Decision projection, optional Break-Glass Decision, exact execution instance, emergency use/consumption/replay state, final executor, and outcome. It records expected versus observed member counts and exact ID/version/hash, delegation and authority at every transition, request/authorization and Authorization/Access reconciliation, Break-Glass/Access/execution reconciliation, zero-deputy equality when applicable, single-use consumption reference, and final-executor reconciliation. Every record carries the same authorization-chain and execution-instance identity. Matching hashes over an incomplete or independently assembled chain do not establish completeness.
+
+Break-glass lineage is valid only when its exact canonical Authorization Decision, exact reconciled Access Decision, execution instance, use identifier, consumption state, and all canonical manifests remain current and reconcile contemporaneously. A missing link, post-hoc association, replay, nested emergency source, changed chain/actor/executor/scope/boundary, or non-waivable-control mismatch is non-actionable and invalidates the audit event.
+
+Audit is append-only by architecture. Corrections, identity merges/splits, grant changes, revocations, decisions, and reconciliation create linked records; nothing overwrites history. Layer 13 does not claim runtime immutability.
+
+Every unknown, missing, ambiguous, stale, expired, revoked, superseded, cross-boundary, purpose-mismatched, confidentiality-invalid, SOD-invalid, authority-invalid, or unreconciled Material condition yields `DENIED` or `REVALIDATION_REQUIRED`, never access. Material failure cannot be averaged or scored away.
