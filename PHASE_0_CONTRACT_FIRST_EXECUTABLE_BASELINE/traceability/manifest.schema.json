@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"urn:ai-consulting-lab:phase0:semantic-traceability:v2",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["manifest_version","certified_commit","workspace_kind","independent_validation","contracts"],
+  "properties":{
+    "manifest_version":{"const":"2.0.0"},
+    "certified_commit":{"const":"ccddb2f3ec0c21e7415e5c4866eda9b8a532a799"},
+    "workspace_kind":{"const":"NON_LAYER_PHASE_0"},
+    "independent_validation":{"type":"object","additionalProperties":false,"required":["id","requirement"],"properties":{"id":{"const":"IV_PHASE0_BLACK_BOX_V1"},"requirement":{"type":"string","minLength":40}}},
+    "contracts":{"type":"array","minItems":1,"uniqueItems":true,"items":{"$ref":"#/$defs/contract"}}
+  },
+  "$defs":{
+    "nonempty":{"type":"string","minLength":1},
+    "outcome":{"type":"object","additionalProperties":false,"required":["disposition","evidence"],"properties":{"disposition":{"enum":["ACCEPT","DENY"]},"evidence":{"$ref":"#/$defs/nonempty"}}},
+    "locator":{"type":"object","additionalProperties":false,"required":["layer","path","sha256","json_pointer","identity","relationship"],"properties":{"layer":{"type":"integer","minimum":0,"maximum":19,"not":{"const":20}},"path":{"type":"string","pattern":"^(0[0-9]|1[0-9])_[^/]+/[^/]+$"},"sha256":{"type":"string","pattern":"^[a-f0-9]{64}$"},"json_pointer":{"type":"string","pattern":"^/(object_types|invariants|transition_rules)/[0-9]+$"},"identity":{"$ref":"#/$defs/nonempty"},"relationship":{"$ref":"#/$defs/nonempty"}}},
+    "contract":{"type":"object","additionalProperties":false,"required":["contract_id","certified_commit","certified_source_locators","requirement_identity","subject_type","preconditions","operation","authority_conditions","currentness_conditions","expected_valid_behavior","prohibited_behavior","assertion_semantics","phase0_classification_rule","expected_phase0_state","future_pass_condition","failure_classification","test_id","fixture_id","interface","independent_validation_requirement"],"properties":{"contract_id":{"type":"string","pattern":"^BC_[A-Z0-9_]+$"},"certified_commit":{"const":"ccddb2f3ec0c21e7415e5c4866eda9b8a532a799"},"certified_source_locators":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/locator"}},"requirement_identity":{"$ref":"#/$defs/nonempty"},"subject_type":{"$ref":"#/$defs/nonempty"},"preconditions":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/nonempty"}},"operation":{"$ref":"#/$defs/nonempty"},"authority_conditions":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/nonempty"}},"currentness_conditions":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/nonempty"}},"expected_valid_behavior":{"$ref":"#/$defs/outcome"},"prohibited_behavior":{"$ref":"#/$defs/outcome"},"assertion_semantics":{"$ref":"#/$defs/nonempty"},"phase0_classification_rule":{"$ref":"#/$defs/nonempty"},"expected_phase0_state":{"const":"EXPECTED_FAIL_NOT_IMPLEMENTED"},"future_pass_condition":{"$ref":"#/$defs/nonempty"},"failure_classification":{"$ref":"#/$defs/nonempty"},"test_id":{"type":"string","pattern":"^P0_[A-Z0-9_]+$"},"fixture_id":{"type":"string","pattern":"^FX_[A-Z0-9_]+$"},"interface":{"$ref":"#/$defs/nonempty"},"independent_validation_requirement":{"const":"IV_PHASE0_BLACK_BOX_V1"}}}
+  },
+  "x-cross-record-constraints":["contract_id unique","test_id unique","fixture_id unique","contract/test/fixture/interface sets exactly reconcile with executable registry and fixture set","all source locators resolve at certified_commit","Layer 20 and future source locators forbidden"]
+}
