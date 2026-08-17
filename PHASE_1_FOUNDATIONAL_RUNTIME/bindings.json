@@ -1,0 +1,19 @@
+{
+  "phase1_slice":"FOUNDATIONAL_PURE_PREREQUISITES_V1",
+  "frozen_phase0_commit":"8b0b5f342fcf95b34dc26051edb09a8394267a8d",
+  "frozen_phase0_tree":"9c633bd4c03c6c124dbb693149856241ba5a5118",
+  "evidence_class":"IMPLEMENTATION_EVIDENCE_NOT_INDEPENDENT_CERTIFICATION",
+  "dependency_order":[
+    {"rank":40,"contract_id":"BC_CANONICAL_REPRESENTATION","phase0_manifest_pointer":"/contracts/0","certified_requirement":"CANONICAL_REPRESENTATION_CONTRACT+F","status":"EMPIRICAL_PASS","component":"canonical::canonical_cbor","frozen_predicate":"satisfies/P0_CANONICAL_REPRESENTATION","empirical_test":"selected_contracts_are_genuine_empirical_passes"},
+    {"rank":50,"contract_id":"BC_IDENTITY_VERSION_PROVENANCE","phase0_manifest_pointer":"/contracts/1","certified_requirement":"REALIZATION_IDENTITY_VERSION_PROVENANCE_CONTRACT+E","status":"EMPIRICAL_PASS","component":"identity::CanonicalIdentity","frozen_predicate":"satisfies/P0_IDENTITY_VERSION_PROVENANCE","empirical_test":"selected_contracts_are_genuine_empirical_passes"},
+    {"rank":60,"contract_id":"BC_CRYPTOGRAPHIC_INTEGRITY","phase0_manifest_pointer":"/contracts/2","certified_requirement":"CRYPTOGRAPHIC_INTEGRITY_CONTRACT+F","status":"EMPIRICAL_PASS","component":"integrity::domain_separated_sha256","frozen_predicate":"satisfies/P0_CRYPTOGRAPHIC_INTEGRITY","empirical_test":"selected_contracts_are_genuine_empirical_passes"},
+    {"rank":70,"contract_id":"BC_TRANSACTIONAL_PERSISTENCE","status":"EXPECTED_NOT_YET_IMPLEMENTED","component":null},
+    {"rank":80,"contract_id":"BC_GLOBAL_UNIQUENESS_CONCURRENCY","status":"EXPECTED_NOT_YET_IMPLEMENTED","component":null},
+    {"rank":90,"contract_id":"BC_REVOCATION_FRESHNESS","status":"EXPECTED_NOT_YET_IMPLEMENTED","component":null},
+    {"rank":100,"contract_id":"BC_RUNTIME_ISOLATION","status":"EXPECTED_NOT_YET_IMPLEMENTED","component":null},
+    {"rank":110,"contract_id":"BC_RECOVERY_RECONCILIATION","status":"EXPECTED_NOT_YET_IMPLEMENTED","component":null},
+    {"rank":120,"contract_id":"BC_AUDIT_EVIDENCE","status":"EXPECTED_NOT_YET_IMPLEMENTED","component":null},
+    {"rank":130,"contract_id":"BC_EMPIRICAL_CERTIFICATION","status":"EXPECTED_NOT_YET_IMPLEMENTED","component":null}
+  ],
+  "binding_rule":"Each ID and source locator is loaded from the frozen Phase 0 manifest; selected adapters implement the frozen public interface and are evaluated by the materially identical frozen predicate semantics."
+}
