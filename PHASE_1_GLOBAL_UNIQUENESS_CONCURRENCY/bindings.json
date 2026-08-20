@@ -1,0 +1,35 @@
+{
+  "slice_id": "PHASE_1_GLOBAL_UNIQUENESS_CONCURRENCY_V1",
+  "certified_head_at_construction": "4b211c0f9c57d8f629793d3ec603a0cda464c0ff",
+  "frozen_phase0_commit": "8b0b5f342fcf95b34dc26051edb09a8394267a8d",
+  "certified_predecessors": [
+    "BC_IDENTITY_VERSION_PROVENANCE",
+    "BC_TRANSACTIONAL_PERSISTENCE"
+  ],
+  "selected_contracts": [
+    {
+      "contract_id": "BC_GLOBAL_UNIQUENESS_CONCURRENCY",
+      "phase0_manifest_pointer": "/contracts/4",
+      "certified_source_path": "16_OPERATIONAL_REALIZATION_CONFORMANCE_ARCHITECTURE/CANONICAL_MODEL.json",
+      "certified_source_sha256": "295441a5f83f0ba6626c212a8950c8c0214a903709ade8617eddcdcca397051c",
+      "certified_source_pointers": ["/object_types/7", "/invariants/8"],
+      "certified_requirement": "UNIQUENESS_CONCURRENCY_CONTRACT+I",
+      "frozen_test_id": "P0_GLOBAL_UNIQUENESS_CONCURRENCY",
+      "frozen_fixture_id": "FX_CONCURRENCY_01",
+      "frozen_interface": "enforce_global_uniqueness",
+      "frozen_predicate": "satisfies/P0_GLOBAL_UNIQUENESS_CONCURRENCY",
+      "implementation": "src/lib.rs::GlobalUniquenessAdapter",
+      "empirical_test": "frozen_stale_writer_contract_is_database_backed_pass",
+      "status": "EMPIRICAL_PASS"
+    }
+  ],
+  "deferred_contracts": [
+    "BC_REVOCATION_FRESHNESS",
+    "BC_RUNTIME_ISOLATION",
+    "BC_RECOVERY_RECONCILIATION",
+    "BC_AUDIT_EVIDENCE",
+    "BC_EMPIRICAL_CERTIFICATION"
+  ],
+  "claim_boundary": "LOCAL_SQLITE_UNIQUENESS_CAS_AND_OVERLAPPING_CONTENTION_ONLY; IMPLEMENTATION_EVIDENCE; NOT_INDEPENDENT_CERTIFICATION"
+}
+

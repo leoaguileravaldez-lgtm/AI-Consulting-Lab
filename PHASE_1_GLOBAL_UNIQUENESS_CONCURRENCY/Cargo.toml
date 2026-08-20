@@ -1,0 +1,12 @@
+[package]
+name = "ai-consulting-lab-phase1-global-uniqueness-concurrency"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+ai-consulting-lab-phase0-contracts = { path = "../PHASE_0_CONTRACT_FIRST_EXECUTABLE_BASELINE/contracts" }
+ai-consulting-lab-phase1-transactional-persistence = { path = "../PHASE_1_TRANSACTIONAL_PERSISTENCE" }
+serde_json = "=1.0.145"
+sha2 = "=0.10.9"
+
