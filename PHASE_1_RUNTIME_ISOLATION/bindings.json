@@ -1,0 +1,24 @@
+{
+  "slice_id":"PHASE_1_RUNTIME_ISOLATION_V1",
+  "certified_head_at_construction":"f6598ab11c1b993e478be3c492513cad6e49c95d",
+  "frozen_phase0_commit":"8b0b5f342fcf95b34dc26051edb09a8394267a8d",
+  "certified_predecessors":["BC_IDENTITY_VERSION_PROVENANCE","BC_CRYPTOGRAPHIC_INTEGRITY","BC_TRANSACTIONAL_PERSISTENCE","BC_GLOBAL_UNIQUENESS_CONCURRENCY","BC_REVOCATION_FRESHNESS"],
+  "selected_contracts":[{
+    "contract_id":"BC_RUNTIME_ISOLATION",
+    "phase0_manifest_pointer":"/contracts/6",
+    "certified_source_path":"16_OPERATIONAL_REALIZATION_CONFORMANCE_ARCHITECTURE/CANONICAL_MODEL.json",
+    "certified_source_sha256":"295441a5f83f0ba6626c212a8950c8c0214a903709ade8617eddcdcca397051c",
+    "certified_source_pointers":["/object_types/9","/invariants/10"],
+    "certified_requirement":"ISOLATION_RUNTIME_ATTESTATION_CONTRACT+K",
+    "frozen_test_id":"P0_RUNTIME_ISOLATION",
+    "frozen_fixture_id":"FX_ISOLATION_01",
+    "frozen_interface":"attest_runtime_isolation",
+    "frozen_predicate":"satisfies/P0_RUNTIME_ISOLATION",
+    "implementation":"src/lib.rs::RuntimeIsolationAdapter",
+    "empirical_test":"frozen_cross_client_request_is_denied_without_actor_amplification",
+    "status":"EMPIRICAL_PASS"
+  }],
+  "deferred_contracts":["BC_RECOVERY_RECONCILIATION","BC_AUDIT_EVIDENCE","BC_EMPIRICAL_CERTIFICATION"],
+  "claim_boundary":"LOCAL_SEPARATE_PROCESS_CAPABILITY_AND_RESOURCE_BROKER_ONLY; IMPLEMENTATION_EVIDENCE; NOT_OS_SANDBOX_OR_INDEPENDENT_CERTIFICATION"
+}
+

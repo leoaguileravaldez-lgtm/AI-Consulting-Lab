@@ -1,0 +1,13 @@
+{
+  "evidence_kind":"LOCAL_IMPLEMENTATION_EVIDENCE_NON_CERTIFYING",
+  "construction_base_head":"f6598ab11c1b993e478be3c492513cad6e49c95d",
+  "selected_contract":"BC_RUNTIME_ISOLATION",
+  "classification":"EMPIRICAL_PASS",
+  "infrastructure":{"mechanism":"separate local worker process + trusted environment configuration + SQLite capability registry + dedicated temporary resource roots","sqlite":"3.51.0","container":false,"public_listener":false,"production_dependency":false},
+  "protected_model":["workload client identity","MACHINE actor type","CURRENT attestation","opaque capability","client resource root","canonical resource containment"],
+  "observations":{"own_context":"ACCEPTED_BY_SEPARATE_WORKER","foreign_context":"EXPECTED_FOREIGN_CONTEXT_REJECTION","identity_substitution":"EXPECTED_AUTHORITY_REJECTION","resource_substitution":"EXPECTED_ISOLATION_REJECTION","revoked_authority":"EXPECTED_AUTHORITY_REJECTION","failure_containment":"FOREIGN_STATE_UNCHANGED","unexpected_error":"NOT_EMPIRICAL_PASS"},
+  "repeatability":{"fresh_resource_runs":3,"tests_per_run":9,"passed_per_run":9,"failed_per_run":0,"cleanup":"PASS"},
+  "deferred_contracts":["BC_RECOVERY_RECONCILIATION","BC_AUDIT_EVIDENCE","BC_EMPIRICAL_CERTIFICATION"],
+  "claim_boundary":["bounded local broker-mediated cross-context isolation","authority non-amplification","implementation evidence only"],
+  "prohibited_claims":["container or VM isolation","kernel security guarantee","production multi-tenant security","distributed isolation","crash recovery","audit certification","deployment readiness","independent certification"]
+}
