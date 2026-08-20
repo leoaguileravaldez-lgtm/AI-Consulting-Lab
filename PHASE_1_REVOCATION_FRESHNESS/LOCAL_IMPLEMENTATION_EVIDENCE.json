@@ -1,0 +1,24 @@
+{
+  "evidence_kind":"LOCAL_IMPLEMENTATION_EVIDENCE_NON_CERTIFYING",
+  "construction_base_head":"3ac61760ba03427c7fd36b12ff0000cd5850d8b2",
+  "selected_contract":"BC_REVOCATION_FRESHNESS",
+  "classification":"EMPIRICAL_PASS",
+  "database":{"mechanism":"/usr/bin/sqlite3","version":"3.51.0","storage":"disposable local file","journal_mode":"WAL","public_listener":false,"production_dependency":false},
+  "authoritative_state_model":["CURRENT","REVOKED","SUPERSEDED","STALE","UNKNOWN_OR_INDETERMINATE"],
+  "observations":{
+    "current_before_revocation":"ACCEPTED_CURRENT_GENERATION_4",
+    "atomic_revocation":"AUTHORITY_REVOKED_GENERATION_5_AND_REVOCATION_EPOCH_5_COMMITTED_TOGETHER",
+    "stale_cached_grant":"EXPECTED_REVOKED_REJECTION_CACHE_INVALIDATED",
+    "resurrection":"DATABASE_TRIGGER_AUTHORITY_RESURRECTION_REJECTION_CODE_19",
+    "supersession":"EXPECTED_SUPERSEDED_REJECTION",
+    "unknown":"UNKNOWN_OR_INDETERMINATE_NOT_CURRENT",
+    "unrelated_database_error":"UNEXPECTED_DATABASE_ERROR_NOT_EMPIRICAL_PASS",
+    "downstream_contracts":"EXPECTED_NOT_YET_IMPLEMENTED"
+  },
+  "freshness_semantics":"authoritative generation/epoch currentness; no wall-clock or distributed latency claim",
+  "projection_semantics":"derived projection may be invalidated but never creates or restores authority",
+  "repeatability":{"fresh_database_runs":3,"tests_per_run":9,"passed_per_run":9,"failed_per_run":0,"cleanup":"PASS"},
+  "claim_boundary":["local SQLite authoritative revocation/currentness","stale cached grant fail-closed rejection","implementation evidence only"],
+  "prohibited_claims":["PostgreSQL behavior","distributed revocation propagation","multi-node cache coherence","network partition tolerance","production recovery","runtime isolation","audit certification","deployment readiness","independent certification"],
+  "independent_certification":false
+}

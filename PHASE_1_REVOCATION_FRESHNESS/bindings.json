@@ -1,0 +1,24 @@
+{
+  "slice_id":"PHASE_1_REVOCATION_FRESHNESS_V1",
+  "certified_head_at_construction":"3ac61760ba03427c7fd36b12ff0000cd5850d8b2",
+  "frozen_phase0_commit":"8b0b5f342fcf95b34dc26051edb09a8394267a8d",
+  "certified_predecessors":["BC_IDENTITY_VERSION_PROVENANCE","BC_TRANSACTIONAL_PERSISTENCE","BC_GLOBAL_UNIQUENESS_CONCURRENCY"],
+  "selected_contracts":[{
+    "contract_id":"BC_REVOCATION_FRESHNESS",
+    "phase0_manifest_pointer":"/contracts/5",
+    "certified_source_path":"16_OPERATIONAL_REALIZATION_CONFORMANCE_ARCHITECTURE/CANONICAL_MODEL.json",
+    "certified_source_sha256":"295441a5f83f0ba6626c212a8950c8c0214a903709ade8617eddcdcca397051c",
+    "certified_source_pointers":["/object_types/8","/invariants/9"],
+    "certified_requirement":"REVOCATION_FRESHNESS_PROPAGATION_CONTRACT+J",
+    "frozen_test_id":"P0_REVOCATION_FRESHNESS",
+    "frozen_fixture_id":"FX_REVOCATION_01",
+    "frozen_interface":"propagate_revocation_and_freshness",
+    "frozen_predicate":"satisfies/P0_REVOCATION_FRESHNESS",
+    "implementation":"src/lib.rs::RevocationFreshnessAdapter",
+    "empirical_test":"frozen_revocation_dominates_stale_cache",
+    "status":"EMPIRICAL_PASS"
+  }],
+  "deferred_contracts":["BC_RUNTIME_ISOLATION","BC_RECOVERY_RECONCILIATION","BC_AUDIT_EVIDENCE","BC_EMPIRICAL_CERTIFICATION"],
+  "claim_boundary":"LOCAL_SQLITE_AUTHORITATIVE_EPOCH_CURRENTNESS_ONLY; IMPLEMENTATION_EVIDENCE; NOT_INDEPENDENT_CERTIFICATION"
+}
+
