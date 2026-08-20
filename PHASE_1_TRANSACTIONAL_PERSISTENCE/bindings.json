@@ -1,0 +1,32 @@
+{
+  "slice_id": "PHASE_1_TRANSACTIONAL_PERSISTENCE_V1",
+  "certified_head_at_construction": "86dcc98068bfc6a6a5cabb39d99847a956bae236",
+  "frozen_phase0_commit": "8b0b5f342fcf95b34dc26051edb09a8394267a8d",
+  "selected_contracts": [
+    {
+      "contract_id": "BC_TRANSACTIONAL_PERSISTENCE",
+      "phase0_manifest_pointer": "/contracts/3",
+      "certified_source_path": "16_OPERATIONAL_REALIZATION_CONFORMANCE_ARCHITECTURE/CANONICAL_MODEL.json",
+      "certified_source_sha256": "295441a5f83f0ba6626c212a8950c8c0214a903709ade8617eddcdcca397051c",
+      "certified_source_pointers": ["/object_types/6", "/invariants/6"],
+      "certified_requirement": "PERSISTENCE_TRANSACTION_CONTRACT+G",
+      "frozen_test_id": "P0_TRANSACTIONAL_PERSISTENCE",
+      "frozen_fixture_id": "FX_TRANSACTION_01",
+      "frozen_interface": "persist_transactionally",
+      "frozen_predicate": "satisfies/P0_TRANSACTIONAL_PERSISTENCE",
+      "implementation": "src/lib.rs::TransactionalPersistenceAdapter",
+      "empirical_test": "frozen_transactional_contract_is_a_database_backed_pass",
+      "status": "EMPIRICAL_PASS"
+    }
+  ],
+  "deferred_contracts": [
+    "BC_GLOBAL_UNIQUENESS_CONCURRENCY",
+    "BC_REVOCATION_FRESHNESS",
+    "BC_RUNTIME_ISOLATION",
+    "BC_RECOVERY_RECONCILIATION",
+    "BC_AUDIT_EVIDENCE",
+    "BC_EMPIRICAL_CERTIFICATION"
+  ],
+  "claim_boundary": "LOCAL_SQLITE_DATABASE_ATOMICITY_ONLY; IMPLEMENTATION_EVIDENCE; NOT_INDEPENDENT_CERTIFICATION"
+}
+

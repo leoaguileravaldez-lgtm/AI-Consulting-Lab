@@ -1,0 +1,55 @@
+{
+  "evidence_kind": "LOCAL_IMPLEMENTATION_EVIDENCE_NON_CERTIFYING",
+  "construction_base_head": "86dcc98068bfc6a6a5cabb39d99847a956bae236",
+  "selected_contract": "BC_TRANSACTIONAL_PERSISTENCE",
+  "classification": "EMPIRICAL_PASS",
+  "frozen_test_id": "P0_TRANSACTIONAL_PERSISTENCE",
+  "frozen_fixture_id": "FX_TRANSACTION_01",
+  "database": {
+    "mechanism": "/usr/bin/sqlite3",
+    "version": "3.51.0",
+    "storage": "disposable local file",
+    "journal_mode": "WAL",
+    "transaction_synchronous": "FULL",
+    "read_uncommitted": false,
+    "public_listener": false,
+    "production_dependency": false
+  },
+  "observations": {
+    "normal_complete_transaction": "ALL_THREE_RECORDS_COMMITTED",
+    "explicit_rollback": "NO_AUTHORITATIVE_RECORDS",
+    "partial_statement_failure": "ATOMIC_ROLLBACK_CONFIRMED",
+    "invalid_predecessor": "DATABASE_REJECTION_NO_PARTIAL_COMMIT",
+    "invalid_provenance": "DATABASE_REJECTION_NO_PARTIAL_COMMIT",
+    "replay": "DETERMINISTIC_REJECTION_HISTORY_PRESERVED",
+    "append_only_update_delete": "DATABASE_TRIGGER_REJECTION",
+    "database_error_capture": "EXIT_CODE_STDOUT_STDERR_PRESERVED",
+    "expected_error_matching": "SQLITE_CONSTRAINT_CODE_19_PLUS_CONSTRAINT_IDENTITY",
+    "unrelated_database_error": "UNEXPECTED_DATABASE_ERROR_NOT_EMPIRICAL_PASS",
+    "frozen_false_pass_controls": "REJECTED",
+    "downstream_contracts": "EXPECTED_NOT_YET_IMPLEMENTED"
+  },
+  "repeatability": {
+    "fresh_database_runs": 3,
+    "tests_per_run": 12,
+    "passed_per_run": 12,
+    "failed_per_run": 0,
+    "cleanup": "PASS"
+  },
+  "claim_boundary": [
+    "local SQLite database atomicity",
+    "frozen transactional rollback behavior",
+    "implementation evidence only"
+  ],
+  "prohibited_claims": [
+    "PostgreSQL behavior",
+    "production durability",
+    "distributed durability",
+    "global concurrency correctness",
+    "crash recovery",
+    "audit-platform certification",
+    "deployment readiness",
+    "independent certification"
+  ],
+  "independent_certification": false
+}
