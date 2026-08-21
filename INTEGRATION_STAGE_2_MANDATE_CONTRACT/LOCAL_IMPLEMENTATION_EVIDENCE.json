@@ -1,0 +1,26 @@
+{
+  "evidence_kind":"LOCAL_STAGE_II_MANDATE_CONTRACT_IMPLEMENTATION_EVIDENCE_NON_PRODUCTION",
+  "institutional_name":"TITUS LAB",
+  "certified_parent":"6fc3b3fac9b079be216dbff6e7bdc8a26a0b9f66",
+  "node":"MANDATE_CONTRACT_FIRST_SLICE",
+  "classification":"EMPIRICAL_PASS",
+  "results":{
+    "deterministic_mandate_identity":"PASS",
+    "engagement_ownership":"PASS",
+    "same_client_cross_engagement_substitution":"REJECTED",
+    "scope_partition":"IN_SCOPE_OUT_OF_SCOPE_REQUIRES_CLARIFICATION",
+    "silent_scope_expansion":"BLOCKED",
+    "versioning":"PASS_APPEND_ONLY_HISTORY",
+    "stale_write":"REJECTED",
+    "lifecycle":"PASS",
+    "original_client_input":"PRESERVED",
+    "working_language_source_language_separation":"PASS",
+    "authority_amplification":0,
+    "human_principal_bypass":"BLOCKED",
+    "decision_problem_handoff":"EXACT_CURRENT_MANDATE_VERSION_ONLY"
+  },
+  "fixed_suite":{"tests":9,"passed":9,"failed":0,"repetitions":3,"cleanup_recreate":"PASS","residual_synthetic_resources":0},
+  "deferred":["DECISION_PROBLEM","WORKSTREAM_ROUTING","ANALYSIS","SYNTHESIS","RECOMMENDATION","STAGE_II_CERTIFICATION","WORKBENCH","CLIENT_ACCESS","DEPLOYMENT"],
+  "non_drift":{"stage1_bypass":0,"duplicated_engagement_domain_functionality":0,"accidental_new_authority":0,"premature_frontend":0,"premature_deployment":0,"hidden_layer20":0,"architectural_drift":0}
+}
+

@@ -1,0 +1,16 @@
+{
+  "institutional_name":"TITUS LAB",
+  "legacy_repository_identity":"AI-Consulting-Lab",
+  "node":"MANDATE_CONTRACT",
+  "normative_source":"15_CONSULTING_ENGAGEMENT_ORCHESTRATION_AND_EVIDENCE_GOVERNANCE/CANONICAL_MODEL.json#MANDATE_CONTRACT",
+  "certified_parent":"6fc3b3fac9b079be216dbff6e7bdc8a26a0b9f66",
+  "predecessor":"INTEGRATION_STAGE_2_ENGAGEMENT_DOMAIN",
+  "successor":"DECISION_PROBLEM",
+  "authority":"HUMAN_PRINCIPAL_OR_AUTHORIZED_PRINCIPAL; THIS SLICE REQUIRES HUMAN_PRINCIPAL",
+  "stage1_bypass":0,
+  "decision_problem_implemented":false,
+  "workbench_implemented":false,
+  "client_access_implemented":false,
+  "layer20":"ABSENT"
+}
+

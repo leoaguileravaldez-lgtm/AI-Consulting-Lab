@@ -1,0 +1,10 @@
+[package]
+name = "titus-lab-integration-stage-2-mandate-contract"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+titus-lab-integration-stage-2-engagement-domain = { path = "../INTEGRATION_STAGE_2_ENGAGEMENT_DOMAIN" }
+sha2 = "=0.10.9"
+
