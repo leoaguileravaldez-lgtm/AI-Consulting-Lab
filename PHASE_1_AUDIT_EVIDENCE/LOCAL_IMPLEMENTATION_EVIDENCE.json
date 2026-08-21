@@ -1,0 +1,64 @@
+{
+  "evidence_kind": "LOCAL_IMPLEMENTATION_EVIDENCE_NON_CERTIFYING",
+  "institutional_name": "TITUS LAB",
+  "legacy_name_preserved": "The AI Consulting Lab",
+  "construction_base_head": "8505db29126c68ff3ff6112f5c71665188393227",
+  "selected_contract": "BC_AUDIT_EVIDENCE",
+  "frozen_requirement": "TELEMETRY_AUDIT_EVIDENCE_CONTRACT+O+T11_REQUIRE_TELEMETRY",
+  "classification": "EMPIRICAL_PASS",
+  "infrastructure": {
+    "mechanism": "/usr/bin/sqlite3 disposable local database",
+    "journal_mode": "WAL",
+    "synchronous": "FULL",
+    "replaceable": true,
+    "production_dependency": false
+  },
+  "model": {
+    "identity": "domain-separated SHA-256 over context, generation, operation, event type and sequence",
+    "provenance": "source, actor, workload, context, generation, operation and authoritative transition reference are both hash-bound and exactly compared with a separately supplied authoritative expected-binding manifest",
+    "lineage": "authoritative current tail plus exact next sequence and predecessor hash",
+    "completeness": "exact bounded expected-record identity manifest and expected/observed count",
+    "authority": "observational only"
+  },
+  "fixed_suite": {
+    "tests": 17,
+    "passed": 17,
+    "failed": 0,
+    "repetitions": 3,
+    "repetition_results": ["17/17 PASS", "17/17 PASS", "17/17 PASS"],
+    "cleanup_recreate": "PASS",
+    "residual_synthetic_resources": 0
+  },
+  "controls": {
+    "frozen_skipped_predecessor": "REJECTED_NO_MUTATION",
+    "missing_required_record": "INCOMPLETE_AUDIT_EVIDENCE",
+    "payload_or_provenance_tamper": "TAMPERED_AUDIT_EVIDENCE",
+    "duplicate_identity": "DUPLICATE_AUDIT_EVIDENCE",
+    "replay": "REPLAYED_AUDIT_EVIDENCE",
+    "cross_context": "CROSS_CONTEXT_EVIDENCE",
+    "stale_generation": "STALE_EVIDENCE",
+    "unexpected_database_error": "UNEXPECTED_DATABASE_ERROR_NOT_PASS",
+    "unexpected_process_error": "UNEXPECTED_PROCESS_ERROR_NOT_PASS",
+    "wrong_hash_consistent_provenance": "AUTHORITATIVE_PROVENANCE_MISMATCH_NOT_VALID",
+    "adapter_database_error": "EXPLICIT_UNEXPECTED_DATABASE_ERROR_NOT_EXPECTED_REJECTION",
+    "adapter_material_facts": "DERIVED_FROM_OBSERVED_JOURNAL_RESULT",
+    "audit_to_execution_authority_leakage": 0,
+    "audit_to_recovery_authority_leakage": 0,
+    "audit_to_layer19_authority_leakage": 0,
+    "audit_to_certification_authority_leakage": 0
+  },
+  "deferred_contracts": ["BC_EMPIRICAL_CERTIFICATION"],
+  "independent_validation": "REQUIRED_SEPARATELY; IMPLEMENTATION_TEAM_DID_NOT_CERTIFY_ITSELF",
+  "unsupported_claims": [],
+  "prohibited_claims": [
+    "production logging completeness",
+    "distributed audit or ordering",
+    "Byzantine tamper resistance",
+    "external-effect truth",
+    "production monitoring",
+    "regulatory certification",
+    "independent certification",
+    "deployment",
+    "Operational Beta readiness"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "slice_id":"PHASE_1_AUDIT_EVIDENCE_V1",
+  "institutional_name":"TITUS LAB",
+  "construction_base_head":"8505db29126c68ff3ff6112f5c71665188393227",
+  "frozen_phase0_commit":"8b0b5f342fcf95b34dc26051edb09a8394267a8d",
+  "certified_predecessors":["BC_CRYPTOGRAPHIC_INTEGRITY","BC_TRANSACTIONAL_PERSISTENCE","BC_GLOBAL_UNIQUENESS_CONCURRENCY","BC_REVOCATION_FRESHNESS","BC_RUNTIME_ISOLATION","BC_RECOVERY_RECONCILIATION"],
+  "selected_contract":{"contract_id":"BC_AUDIT_EVIDENCE","phase0_manifest_pointer":"/contracts/8","certified_source_path":"16_OPERATIONAL_REALIZATION_CONFORMANCE_ARCHITECTURE/CANONICAL_MODEL.json","certified_source_sha256":"295441a5f83f0ba6626c212a8950c8c0214a903709ade8617eddcdcca397051c","certified_source_pointers":["/object_types/11","/invariants/14","/transition_rules/10"],"certified_requirement":"TELEMETRY_AUDIT_EVIDENCE_CONTRACT+O+T11_REQUIRE_TELEMETRY","frozen_test_id":"P0_AUDIT_EVIDENCE","frozen_fixture_id":"FX_AUDIT_01","frozen_interface":"emit_audit_evidence","frozen_predicate":"satisfies/P0_AUDIT_EVIDENCE"},
+  "deferred_contracts":["BC_EMPIRICAL_CERTIFICATION"],
+  "evidence_class":"LOCAL_IMPLEMENTATION_EVIDENCE_NON_CERTIFYING"
+}
+
