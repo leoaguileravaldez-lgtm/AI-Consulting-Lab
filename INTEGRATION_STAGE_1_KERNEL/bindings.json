@@ -1,0 +1,21 @@
+{
+  "slice_id":"TITUS_LAB_INTEGRATION_STAGE_1_KERNEL_V1",
+  "institutional_name":"TITUS LAB",
+  "legacy_repository_identity":"AI-Consulting-Lab",
+  "certified_parent":"6023c33ecafb093c55750d1e5e86ce77ba87cd57",
+  "program_stage":"STAGE_I_INTEGRATION_KERNEL",
+  "authority_rule":"INTEGRATION_AND_ORCHESTRATION_CREATE_NO_AUTHORITY",
+  "certified_components":[
+    {"id":"BC_CANONICAL_REPRESENTATION+BC_IDENTITY_VERSION_PROVENANCE+BC_CRYPTOGRAPHIC_INTEGRITY","path":"PHASE_1_FOUNDATIONAL_RUNTIME","usage":"canonical result identity, context-bound identity, domain-separated integrity"},
+    {"id":"BC_TRANSACTIONAL_PERSISTENCE+BC_GLOBAL_UNIQUENESS_CONCURRENCY","path":"PHASE_1_GLOBAL_UNIQUENESS_CONCURRENCY","usage":"SQLite WAL-backed predecessor/fence state transition"},
+    {"id":"BC_REVOCATION_FRESHNESS","path":"PHASE_1_REVOCATION_FRESHNESS","usage":"authoritative current/revoked/stale authority evaluation"},
+    {"id":"BC_AUDIT_EVIDENCE","path":"PHASE_1_AUDIT_EVIDENCE","usage":"attributable append-only audit and authority-leakage verification"},
+    {"id":"BC_EMPIRICAL_CERTIFICATION","path":"PHASE_1_EMPIRICAL_CERTIFICATION","usage":"certified independent-validation architecture predecessor; frozen candidate-specific validator remains unchanged"},
+    {"id":"STAGE_I_INTEGRATION_KERNEL_ACCEPTANCE_V1","path":"INTEGRATION_STAGE_1_KERNEL/src/bin/stage1_independent_validator.rs","usage":"separate candidate-specific fail-closed validator process; no execution, deployment, recovery, retry, or Human Principal authority"}
+  ],
+  "human_principal_boundary":"EXPLICIT_NON_PROXYABLE_GATE; NO_AUTOMATIC_EXTERNAL_ACTION",
+  "deferred_client_access_boundary":{"implemented":false,"client_access_is_source_access":false,"default_delivery":"SERVER_SIDE_CAPABILITY_ACCESS_WITHOUT_REPOSITORY_OR_BACKEND_SOURCE_ACCESS","required_future_controls":["tenant isolation","least privilege","controlled API scopes","sensitive access/export audit","server-side secrets and proprietary authority logic","production debug endpoints disabled","production source maps disabled unless explicitly controlled","no browser-side institutional authority"],"on_premise_requires_separate_review":true,"reverse_engineering_impossibility_claim":false},
+  "deferred_workbench_boundary":{"implemented":false,"product_doctrine":"MINIMALIST_CLEAN_OPERATOR_CONTROL_PLANE","initial_working_languages":["ES","EN"],"setting_scope":["ENGAGEMENT","WORKSPACE"],"working_language_is_source_language":false,"original_source_preserved":true,"source_language_preserved":true,"provenance_preserved":true,"localized_rendering":"DERIVED_ARTIFACT","working_language_to_evidence_mutation_authority":0,"language_setting_authority_amplification":0},
+  "claim_boundary":"BOUNDED_LOCAL_SYNTHETIC_EXECUTABLE_COMPOSITION_ONLY",
+  "layer20":"ABSENT"
+}
