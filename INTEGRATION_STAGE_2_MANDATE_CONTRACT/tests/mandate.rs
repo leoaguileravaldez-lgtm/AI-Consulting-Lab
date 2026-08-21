@@ -3,6 +3,20 @@ use titus_lab_integration_stage_2_engagement_domain::{
     WorkingLanguage,
 };
 use titus_lab_integration_stage_2_mandate_contract::*;
+use sha2::{Digest, Sha256};
+
+fn expected_handoff_id(engagement: &str, mandate: &str, version: u64,
+    context: &str, generation: u64) -> String {
+    let mut hash = Sha256::new();
+    hash.update(b"titus-lab-stage2-mandate-decision-problem-handoff-v1\0");
+    let version = version.to_string();
+    let generation = generation.to_string();
+    for part in [engagement, mandate, version.as_str(), context, generation.as_str()] {
+        hash.update(part.as_bytes());
+        hash.update([0]);
+    }
+    format!("{:x}", hash.finalize())
+}
 
 fn authority(client: &str, engagement: Option<&str>, generation: u64) -> AuthorityGrant {
     let mut operations = all_operations();
@@ -90,8 +104,15 @@ fn valid_mandate_creation_and_handoff_pass() {
     let handoff = mandates.decision_problem_handoff(
         domain.engagement(&engagement).unwrap(), mandate_id, 1,
     ).unwrap();
-    assert_eq!(handoff.mandate_id, mandate_id);
+    assert_eq!(handoff.mandate_id(), mandate_id);
     assert_eq!(handoff.authority_ref, HUMAN_PRINCIPAL);
+    assert_eq!(handoff.authority_context_id(), "synthetic-client-A");
+    assert_eq!(handoff.handoff_id(), expected_handoff_id(
+        &engagement, mandate_id, 1, handoff.authority_context_id(), 1,
+    ));
+    assert_eq!(handoff.engagement_id(), engagement);
+    assert_eq!(handoff.mandate_version(), 1);
+    assert_eq!(handoff.authority_generation(), 1);
 }
 
 #[test]
@@ -197,4 +218,8 @@ fn deterministic_recreation_matches() {
     assert_eq!(mandates_a.decision_problem_handoff(domain_a.engagement(&engagement_a).unwrap(),
         mandate_a, 1).unwrap(), mandates_b.decision_problem_handoff(
         domain_b.engagement(&engagement_b).unwrap(), mandate_b, 1).unwrap());
+    let handoff = mandates_a.decision_problem_handoff(
+        domain_a.engagement(&engagement_a).unwrap(), mandate_a, 1,
+    ).unwrap();
+    assert_eq!(handoff.authority_context_id(), "synthetic-client-A");
 }

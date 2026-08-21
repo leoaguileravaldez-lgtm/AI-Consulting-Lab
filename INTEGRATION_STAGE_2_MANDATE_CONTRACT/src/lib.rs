@@ -121,11 +121,11 @@ struct MandateAggregate {
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct DecisionProblemHandoff {
-    pub handoff_id: String,
+    handoff_id: String,
     pub client_id: String,
-    pub engagement_id: String,
-    pub mandate_id: String,
-    pub mandate_version: u64,
+    engagement_id: String,
+    mandate_id: String,
+    mandate_version: u64,
     pub authorized_objective: String,
     pub in_scope: Vec<String>,
     pub out_of_scope: Vec<String>,
@@ -133,10 +133,20 @@ pub struct DecisionProblemHandoff {
     pub constraints: Vec<String>,
     pub required_decision: String,
     pub authority_ref: String,
-    pub authority_generation: u64,
+    authority_context_id: String,
+    authority_generation: u64,
     pub working_language: WorkingLanguage,
     pub source_refs: Vec<String>,
     pub provenance: Vec<String>,
+}
+
+impl DecisionProblemHandoff {
+    pub fn handoff_id(&self) -> &str { &self.handoff_id }
+    pub fn engagement_id(&self) -> &str { &self.engagement_id }
+    pub fn mandate_id(&self) -> &str { &self.mandate_id }
+    pub fn mandate_version(&self) -> u64 { self.mandate_version }
+    pub fn authority_context_id(&self) -> &str { &self.authority_context_id }
+    pub fn authority_generation(&self) -> u64 { self.authority_generation }
 }
 
 #[derive(Debug, Default)]
@@ -325,6 +335,7 @@ impl MandateRegistry {
         let version_text = version.to_string();
         let handoff_id = identity("decision-problem-handoff", &[
             mandate.engagement_id(), mandate.mandate_id(), &version_text,
+            &mandate.creation_context,
             &mandate.authority_generation.to_string(),
         ]);
         Ok(DecisionProblemHandoff {
@@ -340,6 +351,7 @@ impl MandateRegistry {
             constraints: mandate.content.constraints.clone(),
             required_decision: mandate.content.required_decision.clone(),
             authority_ref: mandate.authorizer_ref.clone(),
+            authority_context_id: mandate.creation_context.clone(),
             authority_generation: mandate.authority_generation,
             working_language: mandate.working_language,
             source_refs: mandate.original_inputs.iter().map(|source| source.source_ref.clone()).collect(),

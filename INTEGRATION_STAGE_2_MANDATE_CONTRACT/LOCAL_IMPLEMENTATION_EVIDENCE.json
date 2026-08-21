@@ -1,8 +1,8 @@
 {
   "evidence_kind":"LOCAL_STAGE_II_MANDATE_CONTRACT_IMPLEMENTATION_EVIDENCE_NON_PRODUCTION",
   "institutional_name":"TITUS LAB",
-  "certified_parent":"6fc3b3fac9b079be216dbff6e7bdc8a26a0b9f66",
-  "node":"MANDATE_CONTRACT_FIRST_SLICE",
+  "certified_parent":"9d21594a2a769f1807f534b3c54be2cb2c3c8bec",
+  "node":"MANDATE_CONTRACT_AUTHORITATIVE_CONTEXT_HANDOFF_AMENDMENT",
   "classification":"EMPIRICAL_PASS",
   "results":{
     "deterministic_mandate_identity":"PASS",
@@ -17,10 +17,22 @@
     "working_language_source_language_separation":"PASS",
     "authority_amplification":0,
     "human_principal_bypass":"BLOCKED",
-    "decision_problem_handoff":"EXACT_CURRENT_MANDATE_VERSION_ONLY"
+    "decision_problem_handoff":"EXACT_CURRENT_MANDATE_VERSION_ONLY",
+    "authoritative_context_source":"MandateContract.creation_context",
+    "authoritative_context_propagation":"PASS",
+    "handoff_context_provenance":"PASS",
+    "handoff_identity_binds_authoritative_context":"PASS",
+    "public_authoritative_context_mutation":"BLOCKED_PRIVATE_FIELD",
+    "post_construction_context_substitution":"BLOCKED",
+    "caller_constructed_false_certified_context":"BLOCKED_BY_CONTROLLED_CONSTRUCTION",
+    "identity_context_state_divergence":"BLOCKED",
+    "identity_version_state_divergence":"BLOCKED",
+    "certified_handoff_tuple":"PRIVATE_IDENTITY_MANDATE_VERSION_CONTEXT_AND_GENERATION_WITH_IMMUTABLE_ACCESSORS",
+    "public_mandate_version_mutation":"BLOCKED",
+    "public_handoff_identity_mutation":"BLOCKED",
+    "downstream_context_read":"IMMUTABLE_ACCESSOR"
   },
   "fixed_suite":{"tests":9,"passed":9,"failed":0,"repetitions":3,"cleanup_recreate":"PASS","residual_synthetic_resources":0},
   "deferred":["DECISION_PROBLEM","WORKSTREAM_ROUTING","ANALYSIS","SYNTHESIS","RECOMMENDATION","STAGE_II_CERTIFICATION","WORKBENCH","CLIENT_ACCESS","DEPLOYMENT"],
   "non_drift":{"stage1_bypass":0,"duplicated_engagement_domain_functionality":0,"accidental_new_authority":0,"premature_frontend":0,"premature_deployment":0,"hidden_layer20":0,"architectural_drift":0}
 }
-
