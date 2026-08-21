@@ -1,0 +1,13 @@
+{
+  "institutional_name":"TITUS LAB",
+  "legacy_repository_identity":"AI-Consulting-Lab",
+  "stage":"STAGE_II_ENGAGEMENT_DOMAIN_FIRST_SLICE",
+  "certified_stage1_parent":"1f66ea04107193d80eed0671c137ead2e7e32a5b",
+  "stage1_bypass":0,
+  "stage1_audit_reimplementation":0,
+  "stage1_validator_reimplementation":0,
+  "validation_boundary":"STAGE_II_CANDIDATE_SPECIFIC_CERTIFICATION_DEFERRED_TO_SEPARATELY_AUTHORIZED_CLOSURE; HANDOFF_PRESERVED",
+  "workbench":{"implemented":false,"doctrine":"MINIMALIST_CLEAN_OPERATOR_CONTROL_PLANE","languages":["ES","EN"],"scope":"PER_ENGAGEMENT_OR_WORKSPACE"},
+  "client_access":{"implemented":false,"client_access_is_source_access":false,"proprietary_core_default":"SERVER_SIDE","repository_access":false,"backend_source_distribution":false,"frontend_institutional_authority":"PROHIBITED"},
+  "layer20":"ABSENT"
+}
