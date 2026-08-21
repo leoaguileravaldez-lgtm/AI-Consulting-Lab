@@ -1,0 +1,10 @@
+{
+  "slice_id":"PHASE_1_EMPIRICAL_CERTIFICATION_V1",
+  "institutional_name":"TITUS LAB",
+  "candidate_commit":"8364cc3570cca11692e638b6cf3022a47fa9e752",
+  "frozen_phase0_commit":"8b0b5f342fcf95b34dc26051edb09a8394267a8d",
+  "certified_predecessors":["BC_CANONICAL_REPRESENTATION","BC_CRYPTOGRAPHIC_INTEGRITY","BC_TRANSACTIONAL_PERSISTENCE","BC_GLOBAL_UNIQUENESS_CONCURRENCY","BC_REVOCATION_FRESHNESS","BC_RUNTIME_ISOLATION","BC_RECOVERY_RECONCILIATION","BC_AUDIT_EVIDENCE"],
+  "selected_contract":{"contract_id":"BC_EMPIRICAL_CERTIFICATION","phase0_manifest_pointer":"/contracts/9","certified_source_path":"16_OPERATIONAL_REALIZATION_CONFORMANCE_ARCHITECTURE/CANONICAL_MODEL.json","certified_source_sha256":"295441a5f83f0ba6626c212a8950c8c0214a903709ade8617eddcdcca397051c","certified_source_pointers":["/object_types/12","/invariants/18","/transition_rules/11"],"certified_requirement":"FUTURE_EMPIRICAL_CERTIFICATION_CONTRACT+S+T12_DEFINE_FUTURE_TESTS","frozen_test_id":"P0_EMPIRICAL_CERTIFICATION","frozen_fixture_id":"FX_CERTIFICATION_01","frozen_interface":"certify_empirically","frozen_predicate":"satisfies/P0_EMPIRICAL_CERTIFICATION"},
+  "evidence_class":"LOCAL_INDEPENDENT_VALIDATOR_EVIDENCE; NOT_PRODUCTION_OR_REGULATORY_CERTIFICATION"
+}
+

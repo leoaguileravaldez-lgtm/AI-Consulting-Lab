@@ -1,0 +1,30 @@
+{
+  "schema_version":1,
+  "package_id":"titus-phase1-candidate-8364cc3",
+  "repository":"AI-Consulting-Lab",
+  "candidate_commit":"8364cc3570cca11692e638b6cf3022a47fa9e752",
+  "contract_id":"BC_EMPIRICAL_CERTIFICATION",
+  "context_id":"phase1-local-evidence",
+  "generation":1,
+  "certification_input_id":"b5965e8e73c0f0b6203057e0bdc217a98e1d17df41f2bb638f684d8ba6eff165",
+  "environment":{"rustc":"1.97.1","sqlite":"3.51.0","platform":"aarch64-apple-darwin","manifest_hash":"52aee245d9f0bb7f44f807e1019433a43c2baa09dc03bd2a21aeb10f6c434281"},
+  "independence":{"producer_id":"phase1-implementation-team","validator_id":"independent-validator-process-v1","separate_process":true,"imports_producer_implementation":false,"uses_producer_verdict":false},
+  "evidence":[
+    {"id":"foundational-runtime","path":"PHASE_1_FOUNDATIONAL_RUNTIME/bindings.json","sha256":"750f1ea83d88d77f14329cf007a4e4034420019b43e6f31655171f24261fe3b4","status":"EMPIRICAL_PASS"},
+    {"id":"transactional-persistence","path":"PHASE_1_TRANSACTIONAL_PERSISTENCE/LOCAL_IMPLEMENTATION_EVIDENCE.json","sha256":"26d6b6121c556998618ce0e281b555008562068ab87e123410c6f3d54c82be45","status":"EMPIRICAL_PASS"},
+    {"id":"global-uniqueness-concurrency","path":"PHASE_1_GLOBAL_UNIQUENESS_CONCURRENCY/LOCAL_IMPLEMENTATION_EVIDENCE.json","sha256":"ed1c20d3327d98257e48a30d518fd470c0db75814b556326e1b65b5aa35db071","status":"EMPIRICAL_PASS"},
+    {"id":"revocation-freshness","path":"PHASE_1_REVOCATION_FRESHNESS/LOCAL_IMPLEMENTATION_EVIDENCE.json","sha256":"bc85361f32741bb27cf3e3844930b8e548dbf708a13f8c206255e1174b719bec","status":"EMPIRICAL_PASS"},
+    {"id":"runtime-isolation","path":"PHASE_1_RUNTIME_ISOLATION/LOCAL_IMPLEMENTATION_EVIDENCE.json","sha256":"0f1f7cb8833e5cd40deabf07cdf3e5be1690a13ad24c0ba451ff5edb66af4d8f","status":"EMPIRICAL_PASS"},
+    {"id":"recovery-reconciliation","path":"PHASE_1_RECOVERY_RECONCILIATION/LOCAL_IMPLEMENTATION_EVIDENCE.json","sha256":"5846f5adfcbcedf004625872bc8632705c6f3c4aca166ade15c3a45b0862d7fd","status":"EMPIRICAL_PASS"},
+    {"id":"audit-evidence","path":"PHASE_1_AUDIT_EVIDENCE/LOCAL_IMPLEMENTATION_EVIDENCE.json","sha256":"05752754c306d83cc7c741fece713c99e69d523d9e2c0e7edbb80ce690e05c3b","status":"EMPIRICAL_PASS"}
+  ],
+  "material_results":[
+    {"family":"exact-contract-and-version-binding","observed":"PASS"},
+    {"family":"predecessor-evidence-provenance","observed":"PASS"},
+    {"family":"independent-fail-closed-verdict","observed":"PASS"},
+    {"family":"audit-and-authority-separation","observed":"PASS"}
+  ],
+  "aggregate_score":100,
+  "authority_observations":{"deployment_authority_created":false},
+  "implementation_declared_expectation":"CERTIFIED_PASS"
+}

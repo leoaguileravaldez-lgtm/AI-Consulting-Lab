@@ -1,0 +1,16 @@
+{
+  "evidence_kind":"LOCAL_INDEPENDENT_VALIDATOR_EVIDENCE_NON_PRODUCTION",
+  "institutional_name":"TITUS LAB",
+  "candidate_subject":"AI-Consulting-Lab commit 8364cc3570cca11692e638b6cf3022a47fa9e752 bounded Phase 1 predecessor evidence package for BC_EMPIRICAL_CERTIFICATION",
+  "frozen_requirement":"FUTURE_EMPIRICAL_CERTIFICATION_CONTRACT+S+T12_DEFINE_FUTURE_TESTS",
+  "classification":"EMPIRICAL_PASS",
+  "validator":{"id":"independent-validator-process-v1","entry_point":"src/bin/independent_validator.rs","separate_process":true,"imports_producer_implementation":false,"uses_producer_verdict":false,"expectation_source":"certified Layer 16 model + Phase 0 fixture + fixed predecessor evidence manifest"},
+  "trust_root":"certified Layer 16 source hash, exact candidate commit, fixed predecessor evidence manifest, separate validator executable, Human Principal closure authority",
+  "candidate":{"commit":"8364cc3570cca11692e638b6cf3022a47fa9e752","package_sha256":"e5d10307d12288776429671cc1930f95695474001c6cd4f98767fb09b90f35b7","environment_manifest_sha256":"52aee245d9f0bb7f44f807e1019433a43c2baa09dc03bd2a21aeb10f6c434281","verdict":"CERTIFIED_PASS","reason":"ALL_BOUND_MATERIAL_REQUIREMENTS_PASS"},
+  "fixed_suite":{"tests":20,"passed":20,"failed":0,"previous_tests":18,"remediation_controls_added":2,"repetitions":3,"repetition_results":["20/20 PASS","20/20 PASS","20/20 PASS"],"cleanup_recreate":"PASS","residual_synthetic_resources":0},
+  "controls":{"known_good":"CERTIFIED_PASS","material_failure":"CERTIFIED_FAIL_MATERIAL_FAILURE_NOT_AGGREGATED_AWAY","frozen_scenario_digest":"SHA256_EXACT_JSON_SERIALIZED_SCENARIO_DATA","wrong_digest_subject":"BLOCKED","frozen_failure_facts":"ACCEPTED_FALSE_MATERIAL_FAILURE_PRESERVED_TRUE_DEPLOYMENT_AUTHORITY_CREATED_FALSE","missing_frozen_failure_facts":"INCOMPLETE_EVIDENCE","incomplete":"INCOMPLETE_EVIDENCE","altered":"INVALID_EVIDENCE","wrong_commit":"INVALID_EVIDENCE","wrong_contract":"INVALID_EVIDENCE","stale_generation":"INVALID_EVIDENCE","cross_context":"INVALID_EVIDENCE","forged_provenance":"INVALID_EVIDENCE","duplicate_identity":"NOT_CERTIFIED","implementation_pass_laundering":"BLOCKED","audit_pass_laundering":"BLOCKED","validator_independence_failure":"INVALID_EVIDENCE","validator_error":"VALIDATOR_FAILURE_NOT_PASS","infrastructure_error":"INFRASTRUCTURE_FAILURE_NOT_PASS"},
+  "authority":{"self_certification_authority":0,"certification_authority_laundering":0,"execution_authority_leakage":0,"retry_authority_leakage":0,"recovery_authority_leakage":0,"layer19_operational_authority_leakage":0,"deployment_authority_leakage":0},
+  "permitted_claim":"bounded candidate-specific local empirical certification evidence for BC_EMPIRICAL_CERTIFICATION",
+  "unsupported_claims":[],
+  "prohibited_claims":["regulatory certification","legal compliance certification","SOC 2","ISO certification","production readiness","distributed correctness","universal model or decision correctness","autonomous-action safety","deployment readiness","Operational Beta readiness"]
+}
