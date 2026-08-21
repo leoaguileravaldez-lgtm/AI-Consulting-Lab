@@ -1,0 +1,29 @@
+{
+  "subject": "STAGE_II_DECISION_PROBLEM_FIRST_SLICE_v1",
+  "certified_parent": "011fe1a684b6a35a5f56a5c3c2330865059be34f",
+  "scope": "bounded local decision framing only",
+  "fixed_suite_count": 10,
+  "fixed_suite_result": "10/10 PASS",
+  "repetitions": ["10/10 PASS", "10/10 PASS", "10/10 PASS"],
+  "controls": {
+    "mandate_input_binding": "IMPLEMENTED",
+    "scope_expansion": "BLOCKED",
+    "exclusion_erasure": "BLOCKED",
+    "stale_mandate": "BLOCKED",
+    "stale_write": "BLOCKED",
+    "assumption_to_fact_laundering": "BLOCKED",
+    "human_principal_bypass": "BLOCKED",
+    "planning_handoff": "IMPLEMENTED",
+    "authority_context_binding": "PASS_EXACT_CERTIFIED_HANDOFF_CONTEXT",
+    "authority_generation_binding": "PASS_EXACT_EQUALITY",
+    "identity_authority_binding": "PASS_CONTEXT_AND_GENERATION",
+    "old_predecessor": "REJECTED",
+    "current_predecessor": "011fe1a684b6a35a5f56a5c3c2330865059be34f"
+  },
+  "deferred": [
+    "WORKSTREAM_ROUTING", "EVIDENCE_EXECUTION", "RESEARCH_EXECUTION", "ANALYSIS",
+    "FINDINGS", "SYNTHESIS", "RECOMMENDATION", "DELIVERY", "STAGE_II_CERTIFICATION",
+    "WORKBENCH", "CLIENT_ACCESS", "DEPLOYMENT"
+  ],
+  "layer_20": "ABSENT"
+}

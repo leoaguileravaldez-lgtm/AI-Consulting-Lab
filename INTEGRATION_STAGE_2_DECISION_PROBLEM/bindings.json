@@ -1,0 +1,16 @@
+{
+  "institution": "TITUS LAB",
+  "legacy_name": "The AI Consulting Lab",
+  "subject": "STAGE_II_DECISION_PROBLEM_FIRST_SLICE_v1",
+  "certified_parent": "011fe1a684b6a35a5f56a5c3c2330865059be34f",
+  "predecessors": [
+    "INTEGRATION_STAGE_1_KERNEL",
+    "INTEGRATION_STAGE_2_ENGAGEMENT_DOMAIN",
+    "INTEGRATION_STAGE_2_MANDATE_CONTRACT"
+  ],
+  "input": "DecisionProblemHandoff",
+  "output": "PlanningHandoff",
+  "authority_owner": "ENGAGEMENT_AUTHORITY_WITH_HUMAN_PRINCIPAL_BOUNDARY",
+  "downstream": "WORKSTREAM_AND_EVIDENCE_REQUIREMENTS",
+  "layer_20": "ABSENT"
+}
